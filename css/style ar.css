@@ -54,14 +54,14 @@ src: url(../fonts/GE_SS_Two/ArbFONTS-GE_SS_Two_Medium.otf);
   ========================*/
 :root {
   --font-regular: 'hanno regular' !important;
-  --font-mont: 'Montserrat regular' !important;
-  --font-pop-medium: 'Poppins-Medium' !important;
-  --font-semi: 'Poppins-SemiBold' !important;
-  --font-bold: 'Poppins-bold' !important;
-  --font-arp: 'ArbFONTS-GE_SS_Two' !important;
-  --font-robo: 'Roboto-Regular' !important;
-  --font-montsemi: 'Montserrat-SemiBold' !important;
-  --font-marc:'Marcellus-Regular' !important;
+  --font-mont: 'hanno regular' !important;
+  --font-pop-medium: 'hanno regular' !important;
+  --font-semi: 'hanno regular' !important;
+  --font-bold: 'hanno regular' !important;
+  --font-arp: 'hanno regular' !important;
+  --font-robo: 'hanno regular' !important;
+  --font-montsemi: 'hanno regular' !important;
+  --font-marc:'hanno regular' !important;
   --primary-color: #E7E4DD;
   --secound-color: #F7F7F7;
   --third-color: #545454;
@@ -486,6 +486,15 @@ body {
 .vh-100 {
   height: 100vh !important;
 }
+.w-80{
+  width: 80px;
+}
+.h-70{
+  height: 70px;
+}
+.h-142{
+  height: 142px;
+}
 .w-20{
   width: 20px !important;
 }
@@ -708,6 +717,31 @@ input:focus {
     overflow: hidden;
     min-height: 80px;
 }
+.old-price {
+    position: relative;
+    color: #dc3545;
+    font-size: 22px;
+    font-weight: 400;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.old-price::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    top: 50%;
+    height: 2px;
+    background: #dc3545;
+    transform: rotate(-10deg);
+}
+
+.old-price-icon {
+    width: 25px;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(96%) saturate(3165%) hue-rotate(346deg) brightness(92%) contrast(92%);
+}
 .fw-regular {
   font-family: var(--font-regular);
 }
@@ -818,7 +852,9 @@ input:focus {
   width: 140px;
   height: 140px;
 }
-
+.h-31{
+  height: 31px;
+}
 .shadow-bottom {
   box-shadow: 0px 5px 5px -5px rgba(200, 200, 200, 0.5);
   border-radius: 6px;
@@ -847,6 +883,16 @@ input:focus {
 
 .swiper-horizontal .swiper-button-next, .swiper-horizontal.swiper-rtl .swiper-button-prev{
   color: #A67C52;
+}
+.hover-black-white:hover i {
+    filter: brightness(0) invert(1);
+}
+.input-new-segin {
+    border: 0 !important;
+    outline: 0 !important;
+    box-shadow: none !important;
+    background: transparent;
+    width: 100%;
 }
 /*========================
         navbar
@@ -2176,5 +2222,74 @@ transform: translateX(-50%) !important;
     fill: #555;
 }
 
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    accent-color: #e5e5e5;
+    cursor: pointer;
+}
 
-   
+.product-actions {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.favorite-btn,
+.cart-btn {
+    border: none;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.favorite-btn i,
+.cart-btn i {
+    color: #555;
+}
+
+.favorite-btn.active i {
+    color: red;
+}
+.favorite-btn:hover,
+.cart-btn:hover {
+    transform: scale(1.1);
+}
+
+.favorite-btn i,
+.cart-btn i {
+    color: #555;
+    line-height: 0;
+}
+/* .group-input {
+    width: 100%;
+    position: relative;
+}
+
+.input-new-segin {
+    width: 100%;
+    min-height: 50px;
+    padding: 12px 40px 12px 15px;
+    border: 1px solid #D9D9D9;
+    border-radius: 8px;
+    background: #fff;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.input-new-segin {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-left: 40px; /* مساحة للسهم */
+
