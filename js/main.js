@@ -70,54 +70,59 @@ window.addEventListener("scroll", () => {
 });
 
 
-  
-  
-//   $('.uper-nav').each(function () {
-//   $(this).owlCarousel({
-//     rtl: true,
-//     loop: true,
-//     margin: 10,
-//     dots: false,
-//     nav: false,
-//     autoplay: true,
-//     autoplayTimeout: 5000,
-//     responsive: {
-//       0: {
-//         items: 1
-//       },
-//       600: {
-//         items: 1
-//       },
-//       1000: {
-//         items: 1
-//       }
-//     }
-//   });
-// });
+ /*-----products---------*/
+  const filterLinks = document.querySelectorAll(".filter a");
+        const products = document.querySelectorAll(".product-item");
+
+        filterLinks.forEach(link => {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+
+                const filter = link.getAttribute("data-filter");
+
+                products.forEach(product => {
+                    // لو الفلتر all → عرض الكل
+                    if (filter === "all" || product.getAttribute("data-category") === filter) {
+                        product.style.display = "block";
+                    } else {
+                        product.style.display = "none";
+                    }
+                });
+
+                // لإظهار الحالة النشطة على الزرار
+                filterLinks.forEach(l => l.classList.remove("active"));
+                link.classList.add("active");
+            });
+        }); 
+  /*-----------swiper----------*/
+   $(document).ready(function () {
+            $('#Opinions').owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 20,
+                nav: false,
+                dots: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                rtl: true
+            });
+        });
+/*------------thump------------*/
+ document.addEventListener("DOMContentLoaded", function () {
+            const thumbs = document.querySelectorAll(".thump");
+            const mainImage = document.getElementById("mainImage");
+
+            thumbs.forEach(function (thump) {
+                thump.addEventListener("click", function () {
+                    mainImage.src = this.src;
+                    mainImage.alt = this.alt;
+                });
+            });
+        });
 
 
-
-// $('.uper-nav').each(function () {
-//     $(this).owlCarousel({
-//         rtl: true,
-//         loop: true,
-//         margin: 20,
-//         dots: false,
-//         nav: false,
-//         autoplay: true,
-//         autoplayTimeout: 0,
-//         smartSpeed: 20000,
-//         autoplayHoverPause: false,
-//         slideTransition: 'linear',
-//         autoplaySpeed: 20000,
-//         responsive: {
-//             0: { items: 1 },
-//             600: { items: 2 },
-//             1000: { items: 5 }
-//         }
-//     });
-// });
-
+/*---------progress-bar----------------*/
 var $progressBar = $(".progress-bar");
 var $owl = $('#Products');
 

@@ -1311,32 +1311,7 @@
     <script src="js/swipermain.js"></script>
     <script src="js/main.js"></script>
 
-    <script>
-        const filterLinks = document.querySelectorAll(".filter a");
-        const products = document.querySelectorAll(".product-item");
-
-        filterLinks.forEach(link => {
-            link.addEventListener("click", (e) => {
-                e.preventDefault();
-
-                const filter = link.getAttribute("data-filter");
-
-                products.forEach(product => {
-                    // لو الفلتر all → عرض الكل
-                    if (filter === "all" || product.getAttribute("data-category") === filter) {
-                        product.style.display = "block";
-                    } else {
-                        product.style.display = "none";
-                    }
-                });
-
-                // لإظهار الحالة النشطة على الزرار
-                filterLinks.forEach(l => l.classList.remove("active"));
-                link.classList.add("active");
-            });
-        });
-
-    </script>
+  
 </body>
 
 </html>
