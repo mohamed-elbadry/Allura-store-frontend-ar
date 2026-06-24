@@ -245,7 +245,6 @@ var currentStepcustomer = 0;
 //   $progressBarcustomer.css('transform', 'translateX(' + translateXcustomer + 'px)');
 // }
 
-
 function updateProgresscustomer() {
   var wrapperWidthcustomer = $('.progress-wrapper-customer').width();
   var barWidthcustomer = $progressBarcustomer.width();
@@ -258,8 +257,6 @@ function updateProgresscustomer() {
   // يبدأ من اليمين ويتحرك للشمال
   $progressBarcustomer.css('transform', 'translateX(' + (-translateXcustomer) + 'px)');
 }
-
-
 // عند تغيير السلايد
 $owlcustomer.on('changed.owl.carousel', function(event) {
   currentStepcustomer++;
@@ -268,7 +265,6 @@ $owlcustomer.on('changed.owl.carousel', function(event) {
   }
   updateProgresscustomer();
 });
-
 // أول تحميل
 updateProgresscustomer();
 
@@ -320,7 +316,6 @@ var currentSteptakedew = 0;
 //   $progressBartakedew.css('transform', 'translateX(' + translateXtakedew + 'px)');
 // }
 
-
 function updateProgresstakedew() {
   var wrapperWidthtakedew = $('.progress-wrapper-takedew').width();
   var barWidthtakedew = $progressBartakedew.width();
@@ -333,8 +328,6 @@ function updateProgresstakedew() {
   // يبدأ من اليمين ويتحرك للشمال
   $progressBartakedew.css('transform', 'translateX(' + (-translateXtakedew) + 'px)');
 }
-
-
 // عند تغيير السلايد
 $owltakedew.on('changed.owl.carousel', function(event) {
   currentSteptakedew++;
@@ -343,13 +336,8 @@ $owltakedew.on('changed.owl.carousel', function(event) {
   }
   updateProgresstakedew();
 });
-
 // أول تحميل
 updateProgresstakedew();
-
-
-
-
 $('#ingredients').owlCarousel({
     loop:true,
     margin:10,
@@ -374,10 +362,6 @@ $('#ingredients').owlCarousel({
         }
     }
 })
-
-
-
-
 // quntety 
     let value = 1;
     const valueSpan = document.getElementById("value");
