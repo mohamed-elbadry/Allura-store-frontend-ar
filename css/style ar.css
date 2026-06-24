@@ -1155,7 +1155,24 @@ img.arrow-brown {
   font-size: 24px !important;
   font-weight: 300;
 }
+.sub-dropdown {
+  position: relative;
+}
 
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  min-width: 180px;
+  background: #fff;
+  border-radius: 10px;
+  z-index: 1001;
+}
+
+.sub-dropdown:hover .sub-menu {
+  display: block;
+}
 /*========================
         landing
   ========================*/
@@ -2455,21 +2472,3 @@ img.arrow-brown {
 
 
 
-.sub-dropdown {
-  position: relative;
-}
-
-.sub-menu {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 110%;
-  min-width: 180px;
-  background: #fff;
-  border-radius: 10px;
-  z-index: 1001;
-}
-
-.sub-dropdown:hover .sub-menu {
-  display: block;
-}
