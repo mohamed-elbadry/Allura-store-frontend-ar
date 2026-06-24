@@ -3,14 +3,14 @@ document.querySelectorAll('.favorite-btn').forEach(btn => {
     btn.addEventListener('click', function () {
         const icon = this.querySelector('i');
 
-        if (icon.classList.contains('bi-heart')) {
+        this.classList.toggle('active');
+
+        if (this.classList.contains('active')) {
             icon.classList.remove('bi-heart');
             icon.classList.add('bi-heart-fill');
-            icon.style.color = 'red';
         } else {
             icon.classList.remove('bi-heart-fill');
             icon.classList.add('bi-heart');
-            icon.style.color = '';
         }
     });
 });
@@ -18,16 +18,9 @@ document.querySelectorAll('.favorite-btn').forEach(btn => {
 // Cart
 document.querySelectorAll('.cart-btn').forEach(btn => {
     btn.addEventListener('click', function () {
-        const icon = this.querySelector('i');
-
-        if (icon.style.color === 'red') {
-            icon.style.color = '';
-        } else {
-            icon.style.color = 'red';
-        }
+        this.classList.toggle('active');
     });
 });
-
 
 
 
