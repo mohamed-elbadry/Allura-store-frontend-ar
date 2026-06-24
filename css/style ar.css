@@ -2293,3 +2293,23 @@ transform: translateX(-50%) !important;
     -moz-appearance: none;
     padding-left: 40px; /* مساحة للسهم */
 
+
+
+
+    .sub-dropdown {
+    position: relative;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    min-width: 180px;
+    background: #fff;
+    z-index: 1001;
+}
+
+.sub-dropdown:hover .sub-menu {
+    display: block;
+}
