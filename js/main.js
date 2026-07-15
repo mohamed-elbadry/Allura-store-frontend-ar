@@ -385,6 +385,23 @@ $('#ingredients').owlCarousel({
 
 //------customer---------//
 
+$('input[name="userAddressId"]').on('change', function () {
 
+    $('.payment-content').slideUp();
+
+    if ($(this).is(':checked')) {
+        $(this)
+            .closest('.payment-method')
+            .find('.payment-content')
+            .slideDown();
+    }
+
+});
+
+// لإظهار المحتوى الخاص بالـ checked عند تحميل الصفحة
+$('input[name="userAddressId"]:checked')
+    .closest('.payment-method')
+    .find('.payment-content')
+    .show();
 
 
